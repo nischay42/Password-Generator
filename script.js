@@ -1,3 +1,9 @@
+document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        document.getElementById("btn").click()
+    }
+});
+
 class Password {
     constructor(){
         console.log("Welcome to Password generator")
@@ -15,6 +21,15 @@ class Password {
         if (includeLowercase) characterSet += lowerCase;
         if (includeNumber) characterSet += num;
         if (includeSymbol) characterSet += specialCar;
+
+        const copy = document.getElementById("copy")
+        copy.addEventListener('click', () => {
+        const password = output.innerText;
+          if (!password) {
+        return;
+        }
+        navigator.clipboard.writeText(password);
+        })
 
             let i = 0;
             while(this.pass.length < len) {
