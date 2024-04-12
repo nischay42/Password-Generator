@@ -56,9 +56,9 @@
 }
 
 .img {
-    position: absolute; /* Add position absolute */
-    top: 50%; /* Position the image vertically in the middle */
-    right: 4px; /* Adjust the distance from the right */
+    position: absolute;
+    top: 50%;
+    right: 4px;
     transform: translateY(-50%);
     width: 30px; 
 }
